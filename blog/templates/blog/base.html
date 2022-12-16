@@ -9,9 +9,12 @@
     </head>
     <body>
         <div class="page-header">
-            <!-- {% if user.is_authenticated %} -->
+            {% if user.is_authenticated %}
             <a href="{% url 'post_new' %}" class="top-menu"><span class="glyphicon glyphicon-plus"></span></a>
-            <!-- {% endif %} -->
+            <p class="top-menu">Hello {{ user.username }} <small>(<a href="">Log out</a>)</small></p>
+            {% else %}
+            <a href="{% url 'login' %}" class="top-menu"><span class="glyphicon glyphicon-lock"></span></a>
+            {% endif %}
             <h1><a href="/">Django Girls Blog</a></h1>
         </div>
         <div class="content container">
@@ -21,6 +24,41 @@
                 {% endblock %}
                 </div>
             </div>
+        </div>
+        <div>
+            변수 할당을 
+select = s => document.querySelector(s)
+화살표함수로 여러개 생성 
+
+선택자랑 배열, x값배열, y값배열, 오프셋값들,
+컬러값배열, 
+거품들은 gsap.utils.toArray(‘#bubbleGroup rect’) 요런식으로 배열화 
+————————————————————
+💚after downloading python 
+command line start 
+$ python3
+
+1. python3 -m vent myvenv(any name)
+2. source myvenv/bin/activate
+3. python3 -m pip install —upgrade pip 
+4. pip install django~=newest version
+5. django-admin startproject mysite .
+6. after resetting setting.py  python manage.py migrate 
+7. python manage.py runserver 
+8. open new terminal and activate virtual env 
+
+
+1. source myvenv/bin/activate 
+2. python manage.py runserver 
+
+💛django model 
+객체의 특별한 종류, 모델을 저장하면 그 내용이 엑셀시트처럼 데이터베이스에 저장되는 것 
+기본 장고 데이터베이스 어댑터 SQLite 사용
+
+
+
+
+
         </div>
     </body>
 </html>
